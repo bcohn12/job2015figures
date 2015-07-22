@@ -1,0 +1,73 @@
+fullnames = ['Adductor femoris',
+'Adductor longus',
+'Biceps femoris anterior',
+'Biceps femoris posterior',
+'Extensor digitorum longus',
+'Flexor digitorum longus',
+'Flexor hallicus longus',
+'Gluteus maximus',
+'Gluteus medius',
+'Gluteus minimus',
+'Gracilis',
+'Lateral gastrocnemius',
+'Medial gastrocnemius',
+'Peroneus brevis',
+'Pectineus',
+'Peroneus longus',
+'Plantaris',
+'Iliopsoas',
+'Peroneus tertius',
+'Pyriformis',
+'Quadratus femoris',
+'Rectus femoris',
+'Sartorius',
+'Semimembranossus',
+'Soleus',
+'Semitendinosus',
+'Tibialis anterior',
+'Tibialis posterior',
+'Vastus intermedius',
+'Vastus lateralis',
+'Vastus medialis']
+
+shortnames = [
+'adf'  ,
+				'adl'  ,
+				'bfa'  ,
+				'bfp'  ,
+				'edl'  ,
+				'fdl' ,
+				'fhl'  ,
+				'gmax' ,
+				'gmed' ,
+				'gmin',
+				'grac' ,
+				'lg'   ,
+				'mg'   ,
+				'pb'   ,
+				'pec'  ,
+				'pl'   ,
+				'plan' ,
+				'psoas',
+				'pt'   ,
+				'pyr'  ,
+				'qf'   ,
+				'rf'   ,
+				'sart' ,
+				'sm'   ,
+				'sol'  ,
+				'st'   ,
+				'ta'   ,
+				'tp'   ,
+				'vi'   ,
+				'vl'   ,
+				'vm'
+]
+
+print("[")
+for bound in ["upperbound", "lowerbound"]:
+	for muscleNum in range(1,32):
+		for alphaVal in [0.5,0.6,0.7,0.8,0.9]:
+			print("{alpha: " + str(alphaVal) + ", muscleNum: " + str(muscleNum) + ", bound: '" + str(bound) + ", shortname: '" + shortnames[muscleNum -1] + "', fullname: '" +  fullnames[muscleNum-1] + "'},")
+
+print("]")
